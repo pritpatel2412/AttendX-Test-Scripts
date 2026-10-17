@@ -20,3 +20,7 @@ All scripts are now version-controlled with Git and shared through GitHub
 - Always `git pull` before starting work
 - Commit small changes with meaningful messages
 - `git push` after every completed script change
+
+## Contact
+- QA Lead: Prit Patel
+- File edited directly on GitHub to demonstrate `git pull`
