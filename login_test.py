@@ -35,6 +35,11 @@ class LoginTest(unittest.TestCase):
         """TC-L02: wrong password shows an error."""
         self._login("tomsmith", "wrongpassword")
         self.assertIn("Your password is invalid!", self._flash_message())
+    
+    def test_empty_credentials(self):
+        """TC-L03: empty username and password show a validation error."""
+        self._login("", "")
+        self.assertIn("Your username is invalid!", self._flash_message())
 
     def tearDown(self):
         self.driver.quit()
@@ -42,4 +47,3 @@ class LoginTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-```
